@@ -55,16 +55,17 @@ a:active {
 
 /* main headings */
 .tfBodyText h3{
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  font-size: 2em;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 21px;
   color: #666666;
   font-weight: 300;
 }
 
 /* sub-headings */
 .tfBodyText h4{
-  font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -128,7 +129,7 @@ a:active {
 .tfThreePanels{
   position: relative; 
   display: inline-block;
-  width: 29%; 
+  width: 27%; 
   vertical-align: top;
   margin: 0px auto;
   text-align: center;
@@ -146,6 +147,62 @@ a:active {
 }
 
 .tfFourPanels{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsTrue{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsHost{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsTwine{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsViski{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsRevel{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsFoster{
+  vertical-align: top;
+  width: 24%;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.tfFourPanelsTrue-Zoo{
   vertical-align: top;
   width: 24%;
   min-width: 150px;
@@ -202,21 +259,34 @@ background: #B7B7B7;
 }
 
 .viskiButton1 {
-color: #fff;
-display: inline-block;
-position: relative;
-border: none;
-font-family: 'Nunito', "Helvetica Neue",Arial,Helvetica,sans-serif;
-font-size: 14px;
-line-height: 1.6875;
-font-weight: bold;
-text-align: center;
-letter-spacing: .02em;
-text-decoration: none;
-padding: 0.57143em 1.42857em;
-max-width: 100%;
--webkit-font-smoothing: antialiased;
-background: #B7B7B7;
+  color: #444444;
+  display: inline-block;
+  position: relative;
+  border: solid;
+  border-color: #444444;
+  border-width: 2px;
+  font-family: 'Source Sans Pro', "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.6875;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .02em;
+  text-decoration: none;
+  padding: 0.57143em 1.42857em;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background: transparent;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+.viskiButton1:hover {
+  color: #ffffff;
+  background: #444444;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
 }
 
 .sidebarContainer{
@@ -308,7 +378,15 @@ background: #B7B7B7;
     width: 100%;
   }
 
+#catalog .tfThreePanels{
+  width: 31%;
+}
 
+@media screen and (max-width: 760px){
+  #catalog .tfThreePanels{
+    width: 100%;
+  }
+}
 
 #faq{
    max-width: 600px;
@@ -319,12 +397,36 @@ background: #B7B7B7;
 
 }
 
+#tradeshows{
+  width: 80%;
+  margin: 20px auto;
+  min-width: 760px;
+}
+
 #faq h4{
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 
 #host-page {
+    max-width: 800px;
+    float: left;
+    /*margin-left: 200px;*/
+    display: block;
+    width: 70%;
+
+}
+
+#true-page {
+    max-width: 800px;
+    float: left;
+    /*margin-left: 200px;*/
+    display: block;
+    width: 70%;
+
+}
+
+#twine-page {
     max-width: 800px;
     float: left;
     /*margin-left: 200px;*/
@@ -428,7 +530,7 @@ background: #B7B7B7;
   }
 
   #guarantee {
-    width: auto;
+    width: auto !important;
     margin-left: 0px;
   }
 
@@ -452,8 +554,25 @@ background: #B7B7B7;
     margin-left: 0px;
   }
 
+  #host-page {
+      width: auto;
+  }
+
+  #viski-page {
+      width: auto;
+  }
+
+  #true-page {
+      width: auto;
+  }
+
+
   .tfBodyText{
     width: auto;
+  }
+
+  .sidebarContainer {
+      width: 100%;
   }
 
   .sidebar {
@@ -482,12 +601,13 @@ background: #B7B7B7;
     left: -9999px;
     color: red;
   }
-a
+
   .tfThreePanels{
     width: 100%;
     display: block;
     background: transparent;
     padding:0;
+    margin-bottom: 25px;
   }
 
   .tfFourPanels{

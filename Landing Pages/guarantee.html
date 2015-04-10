@@ -26,7 +26,7 @@
 .tfFourPanels h4{
   padding-left: 2.5%;
   width: 95%;
-  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Roboto Condensed' ! important, 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
   letter-spacing: .03em;
 }
@@ -50,10 +50,10 @@
       <a href="/who"><li>Our Company</li></a>
       <a href="/about-brands"><li class="expandingNav">Our Brands</a>
         <ul class="tfHidden" style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host "><li>Host</li></a>
           <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
         </ul>
       </li>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
@@ -102,24 +102,35 @@
 <!-- End Body Section -->
 </div>
 <script>
-var $ = jQuery;
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
 
-var tfMain = function() {
+  var tfMain = function() {
 
 
-  $('.sidebar').scrollToFixed({
-    limit: $('.bodyEnd').offset().top,
-    minWidth: 760
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
   });
-
-
-};
-
-$('.expandingNav').click(function(){
-  $(this).children('.tfHidden').slideDown();
-  });
-
-$(document).ready(tfMain);
+    
+  tfMain();
+}
 
 </script>
 </body>

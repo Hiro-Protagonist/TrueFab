@@ -9,7 +9,7 @@
 .center {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 90%;
 }
 
 #ViskiHeader {
@@ -19,6 +19,7 @@
 
 #ViskiHeader h4 {
   font-size: 3em;
+  line-height: 1em;
   font-weight: 100;
   letter-spacing: .03em;
   color: #444444;
@@ -26,9 +27,10 @@
 }
 
 #ViskiHeader p {
-  font-size: 1em;
-  color: #444444;
-  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+font-size: 1.2em;
+line-height: 1.3em;
+color: #444444;
+font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 }
 
 #ViskiHeader img {
@@ -46,7 +48,7 @@
   font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
   text-align: center;
   color: #444444;
-  font-size: 1.25em;
+  font-size: 1.5em;
   letter-spacing: .2em;
   font-weight: 700;
   text-transform: uppercase;
@@ -154,10 +156,10 @@
       <a href="/who"><li>Our Company</li></a>
       <a href="/about-brands"><li class="expandingNav">Our Brands</a>
         <ul style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host "><li>Host</li></a>
           <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
         </ul>
       </li>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
@@ -175,10 +177,10 @@
 
 <section id="viski-page">
   <div id="ViskiHeader">
-    <img style="width: 100px;" src="/assets/images/content/CD_pages/true_brandlogo_viski.png" />
+    <img style="width: 150px;" src="/assets/images/content/CD_pages/true_brandlogo_viski.png" />
     <div class="center">
     <h4>CIassics, Redefined.</h4>
-    <p>Viski is a collection comprises eight contemporary wine, bar and lifestyle products that marry timeless, classic function and exceptional quality with simple and clean aesthetics.</p>
+    <p style="text-align: justify;">Viski is comprised of contemporary wine, bar and lifestyle collections that marry classic function with exceptional design. Individual pieces, crafted from materials of the highest caliber, range from 24-karat gold-dipped corkscrews and faceted crystal tumblers to a full line of professional barware cast in 18/8 grade stainless steel. Across all collections, the Viski brand is united by an unmistakable element of timeless sophistication which characterizes this selection of classics, redefined.</p>
     <a href="/brands/Brands_Viski"><button class="viskiButton1">Shop Viski</button></a>
     </div>
   </div>
@@ -340,24 +342,35 @@
 <div class="bodyEnd">&nbsp;</div>
 <!-- End Body Section -->
 <script>
-var $ = jQuery;
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
 
-var tfMain = function() {
+  var tfMain = function() {
 
 
-  $('.sidebar').scrollToFixed({
-    limit: $('#site-footer').offset().top-$('.sidebar').height(),
-    minWidth: 760
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
   });
-
-
-};
-
-$('.expandingNav').click(function(){
-  $(this).children('.tfHidden').slideDown();
-  });
-
-$(document).ready(tfMain);
+    
+  tfMain();
+}
 
 </script>
-</body>
+</body><p></p>

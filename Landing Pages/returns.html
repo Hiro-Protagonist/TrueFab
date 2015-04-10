@@ -22,11 +22,11 @@
     <ul>
       <a href="/who"><li>Our Company</li></a>
       <a href="/about-brands"><li class="expandingNav">Our Brands</a>
-        <ul class="tfHidden" style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
+        <ul style="margin-left:15px;">
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host "><li>Host</li></a>
           <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
         </ul>
       </li>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
@@ -45,7 +45,7 @@
   <section id="returns">
 
   <h3>Returns & Exchanges</h3>
-  <p>We dedicate ourselves to the customer experience with a 100% Satisfaction Guarantee unmatched in the industry.  If your product was damaged in shipping, has a quality issue, or isn't selling as quickly as you'd hoped - even if you simply changed your  mind about it - we'll take it back without question and replace it with something better.  Just <a href="https://checkout.na1.netsuite.com/c.1315461/checkout/index.ssp?is=login&n=2&login=T&ck=AAAAABkDAl1T-g2z&vid=RaSm0usCAuYb7zFw&cktime=131871&cart=940&_od=dGYucHJvZHVjdGlvbi5uYTEubmV0c3VpdGVzdGFnaW5nLmNvbQ**&fragment=login-register" data-touchpoint="login" data-hashtag="login-register">log in</a> to your account and fill out the return from and one of our team members will be in touch with you shortly.  If immediate assistance is more convenient for you, please feel free to <a href="#" onclick="window.open('http://a3.websitealive.com/1297/rRouter.asp?groupid=1297&websiteid=0&departmentid=1581&dl='+escape(document.location.href),'','width=400,height=400'); return false;">chat</a> with us live or give us a call at 800.750.8783.</p>
+  <p>We dedicate ourselves to the customer experience with a 100% Satisfaction Guarantee unmatched in the industry.  If your product was damaged in shipping, has a quality issue, or isn't selling as quickly as you'd hoped - even if you simply changed your  mind about it - we'll take it back without question and replace it with something better.  Just <a href="https://checkout.na1.netsuite.com/c.1315461/checkout/index.ssp?is=login&n=2&login=T&ck=AAAAABkDAl1T-g2z&vid=RaSm0usCAuYb7zFw&cktime=131871&cart=940&_od=dGYucHJvZHVjdGlvbi5uYTEubmV0c3VpdGVzdGFnaW5nLmNvbQ**&fragment=login-register" data-touchpoint="login" data-hashtag="login-register">log in</a> to your account and fill out the return form and one of our team members will be in touch with you shortly.  If immediate assistance is more convenient for you, please feel free to <a href="#" onclick="window.open('http://a3.websitealive.com/1297/rRouter.asp?groupid=1297&websiteid=0&departmentid=1581&dl='+escape(document.location.href),'','width=400,height=400'); return false;">chat</a> with us live or give us a call at 800.750.8783.</p>
   <p>Please note that we take the quality of our products very seriously.  If you received a product with damage or a quality issue, we want to hear about it.  If possible, please attach a picture below to assist us in properly addressing the issue.</p>
   <br />
 <h3>We Make Returns Easy</h3>
@@ -59,24 +59,35 @@
 <div class="bodyEnd">&nbsp;</div>
 <!-- End Body Section -->
 <script>
-var $ = jQuery;
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
 
-var tfMain = function() {
+  var tfMain = function() {
 
 
-  $('.sidebar').scrollToFixed({
-    limit: $('.bodyEnd').offset().top,
-    minWidth: 760
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
   });
-
-
-};
-
-$('.expandingNav').click(function(){
-  $(this).children('.tfHidden').slideDown();
-  });
-
-$(document).ready(tfMain);
+    
+  tfMain();
+}
 
 </script>
 </body>

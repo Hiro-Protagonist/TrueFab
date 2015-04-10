@@ -14,38 +14,31 @@
 </style>
 <body>
 <div class="tfBodyText">
+
 <!-- Sidebar -->
 <div class="sidebarContainer">
   <nav class="sidebar" style="position:relative;">
     <h5>About Us</h5>
     <ul>
       <a href="/who"><li>Our Company</li></a>
-      <a href="/about-brands"><li class="expandingNav">Our Brands</a>
-        <ul class="tfHidden" style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
-          <a href="/about-brands-twine"><li>Twine</li></a>
-        </ul>
-      </li>
+      <a href="/about-brands"><li>Our Brands</li></a>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
     </ul>
-    <h5>Help & Info</h5>
+    <h5>Help &amp; Info</h5>
     <ul>
       <a href="/faq"><li>FAQ</li></a>
-      <a href="/shipping"><li>Shipping & Deliveries</li></a>
-      <a href="/returns"><li>Returns & Exchanges</li></a>
+      <a href="/shipping"><li>Shipping &amp; Deliveries</li></a>
+      <a href="/returns"><li>Returns &amp; Exchanges</li></a>
       <a href="/contact"><li>Contact</li></a>
     </ul>
   </nav>
 </div>
 <!-- End Sidebar -->
 
-
   <section id="faq">
 
-  <h2 style="margin-bottom: 0px;">Frequently Asked Questions</h2>
-  <h5>SHOPPING INFORMATION</h5>
+  <h3 style="margin-bottom: 0px;">Frequently Asked Questions</h3>
+  <h4>Shopping Information</h4>
 
   <h6>Okay, I've braced myself - What are your minimums?</h6>
   <p>True has no minimum order requirements.</p>
@@ -71,7 +64,7 @@
   <h6>How do I edit my cart?</h6>
   <p>It's easy!  Click on the cart button on the top right of the page and select "View Cart." You'll have multiple options, including editing.</p>
 
-  <h5>SHIPPING & DELIVERIES</h5>
+  <h4>Shipping &amp; Deliveries</h4>
  
   <h6>I need my order, like, now.  How soon can you send it?</h6>
   <p>Place your order before 3pm Pacific Time and we'll ship it the same day from beautiful Seattle, Washington.  Boom.  And everything placed after 3pm will ship first thing in the morning.</p>
@@ -91,10 +84,8 @@
   <h6>When do I get invoiced for a backordered item?</h6>
   <p>We'll invoice you as soon as the backordered item ships.</p>
 
-  <h6>Do I have to pay for backorder shipping?</h6>
-  <p>Nope, we've got it.</p>
 
-  <h5>RETURNS & EXCHANGES</h5>
+  <h4>Returns &amp; Exchanges</h4>
   <h6>How do I return an item?</h6>
   <p>It's super-easy.  Send an email to <a href="mailto:info@truefabrications.com">info@truefabrications.com</a> and we'll take care of the rest - including the shipping.</p>
 
@@ -108,13 +99,12 @@
   <p>"I don't really have a reason."</p>
   <p>We accept returns and exchanges at any time with no questions asked.  And if a product doesn't sell at your store, for any reason, we'll buy it back and replace it with something that will.  Believe us when we say it: your satisfaction is our highest priority.</p>
 
-  <h5>MORE ABOUT TRUE</h5>
+  <h4>More About True</h4>
 
   <h6>How many office dogs do you have?</h6>
   <p>About ten, all vying for the cutest.</p>
 
-  <h6>I want to learn more about True.  Also, the industry in general.</h6>
-  <h6>Also your office dogs.  Can I do all that?</h6>
+  <h6>I want to learn more about True.  Also, the industry in general. Also your office dogs.  Can I do all that?</h6>
   <p>Of course - check out our <a href="http://truefabrications.com/blog/">blog</a>.  You can also keep up with us on <a href="https://www.facebook.com/truefabrications">Facebook</a>, <a href="https://twitter.com/truefabrication">Twitter</a> and <a href="http://instagram.com/true.fab">Instagram</a>.</p>
 
   <h6>What is your policy regarding online resale?</h6>
@@ -124,26 +114,35 @@
 <div class="bodyEnd">&nbsp;</div>
 <!-- End Body Section -->
 <script>
-var $ = jQuery;
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
 
-var tfMain = function() {
+  var tfMain = function() {
 
 
-  $('.sidebar').scrollToFixed({
-    limit: $('#site-footer').offset().top,
-    minWidth: 760
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
   });
-
-
-};
-
-$('.expandingNav').click(function(){
-  if()
-
-  $(this).children('.tfHidden').slideDown();
-});
-
-$(document).ready(tfMain);
+    
+  tfMain();
+}
 
 </script>
-</body> 
+</body>

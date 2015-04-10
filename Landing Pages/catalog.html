@@ -77,21 +77,24 @@
   padding:0;
 }
 
+.otherCatalogs p{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300 !important;
+  margin-top: 10px;
+}
+
   .otherCatalogs li {
     display: block;
     float: left;
     margin-right: 24px;
-
   }
 
     .otherCatalogs li:last-child {
       margin-right: 0;
-  
     }
     
     .otherCatalogs li a {
       text-align: center;
-  
     }
 
     .otherCatalogs li a img {
@@ -101,6 +104,26 @@
       border: 0;
     }
 
+
+
+@media screen and (max-width: 760px) {
+
+  .otherCatalogs {
+    text-align: center;
+  }
+
+    .otherCatalogs li {
+      width: 100%;
+      float: none;
+      margin: 0 auto;
+    }
+
+    .otherCatalogs li a img {
+      display: none;
+    }
+
+}
+
 </style>
 
 </head>
@@ -108,65 +131,66 @@
 <div class="tfBodyText">
 <section id="catalog">
 
-<div class="tfPanelsContainer" style="margin-top: 10px; padding-bottom: 10px;">
-  <h2 style="text-align: center;">Featured Catalogs</h2>
-  <div style="width: 100%; margin: 0 auto;">
-  <div class="tfThreePanels" style="background-color: #f8f8f8;">
-  <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">  
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf"><img src="/assets/images/content/CD_pages/true_catalog_spring15.png" /></a>
-    <h4>Spring 2015 Catalog</h4>
-    <p>Spring has sprung at True Fabrications! Check out over 200 new products, curated collections, and everyday essentials in the 2015 Spring Catalog.</p>
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf">view it now</a> |
-    <a href="http://catalog.truefabrications.com/pdf/spring2015.pdf">download</a> |
-    <a href="http://www.truefabrications.com/requestcatalog.asp">request a copy</a>
+  <div class="tfPanelsContainer">
+    <h3>Featured Catalogs</h3>
+    <div class="tfThreePanels" style="background-color: #f8f8f8;">
+      <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">  
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf"><img src="/assets/images/content/CD_pages/true_catalog_spring15.png" /></a>
+        <h4>Spring 2015 Catalog</h4>
+        <p>Spring has sprung at True Fabrications! Check out over 200 new products, curated collections, and everyday essentials.</p>
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf">view it now</a> |
+        <a href="http://catalog.truefabrications.com/pdf/spring2015.pdf">download</a> |
+        <a href="/catalogrequest">request a copy</a>
+      </div>
     </div>
-  </div>
-  <div class="tfThreePanels" style="margin-left: 2%; margin-right: 2%; background-color: #f8f8f8;">
-    <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../HOST_2014.pdf"><img src="/assets/images/content/CD_pages/true_catalog_host14.png" /></a>
-    <h4>Host 2014 Catalog</h4>
-    <p>We know that everything can be done better. So that’s what we’re doing. Shop the award-winning collection in the 2014 Summer Catalog.</p>
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../HOST_2014.pdf">view it now</a> |
-    <a href="http://catalog.truefabrications.com/pdf/HOST_2014.pdf">download</a> |
-    <a href="http://www.truefabrications.com/requestcatalog.asp">request a copy</a>
-  </div>
-  </div>
-  <div class="tfThreePanels" style="background-color: #f8f8f8;">
-    <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">  
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf"><img src="/assets/images/content/CD_pages/true_catalog_twine14.png" /></a>
-    <h4>Twine 2014 Catalog</h4>
-    <p>Gifts and homegoods that capture the essence of living with rustic elegance - shop by collection to create your own experience.</p>
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf">view it now</a> | 
-    <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../spring2015.pdf">download</a> | 
-    <a href="http://www.truefabrications.com/requestcatalog.asp">request a copy</a>
-  </div>
+    <div class="tfThreePanels" style="margin-left: 2%; margin-right: 2%; background-color: #f8f8f8;">
+      <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../HOST_2014.pdf"><img src="/assets/images/content/CD_pages/true_catalog_host14.png" /></a>
+        <h4>Host 2014 Catalog</h4>
+        <p>We know that everything can be done better. So that’s what we’re doing. Shop the award-winning collection in the 2014 Summer Catalog.</p>
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../HOST_2014.pdf">view it now</a> |
+        <a href="http://catalog.truefabrications.com/pdf/HOST_2014.pdf">download</a> |
+        <a href="/catalogrequest">request a copy</a>
+      </div>
+    </div>
+    <div class="tfThreePanels" style="background-color: #f8f8f8;">
+      <div style="width: 90%; margin: 0 auto; margin-top: 5%; margin-bottom: 5%;">  
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../twinecatalog.pdf"><img src="/assets/images/content/CD_pages/true_catalog_twine14.png" /></a>
+        <h4>Twine 2014 Catalog</h4>
+        <p>Gifts and homegoods that capture the essence of living with rustic elegance - shop by collection to create your own experience.</p>
+        <a href="http://catalog.truefabrications.com/pdf/viewer/?file=../twinecatalog.pdf">view it now</a> | 
+        <a href="http://catalog.truefabrications.com/pdf/twinecatalog.pdf">download</a> | 
+        <a href="/catalogrequest">request a copy</a>
+      </div>
+    </div>
+    <span class="stretch"></span>
   </div>
 
-  <ul class="otherCatalogs" style="margin-top: 30px; font-family: Montserrat, sans-serif;">
-  <h2>View Other Catalogs</h2>
+  <ul class="otherCatalogs">
+  <h3>View Other Catalogs</h3>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../ValentinesDay2015.pdf">
       <img src="http://www.truefabrications.com/catalog/VDay2015_WebCover.jpg" />
-      <p style="font-family: 'Montserrat', sans-serif;">Valentine 2015</p>
+      <p>Valentine 2015</p>
     </a></li>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../TrueBrewNew.pdf">
       <img src="http://www.truefabrications.com/catalog/brewery.jpg" />
-      <p style="font-family: 'Montserrat', sans-serif;">Beer Accessories</p>
+      <p>Beer Accessories</p>
     </a></li>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../customization_2014.pdf">
       <img src="http://www.truefabrications.com/images/customization_guide_icon.gif" style="margin-left: 10px;" />
-      <p style="font-family: 'Montserrat', sans-serif;">Customization Guide</p>
+      <p>Customization Guide</p>
     </a></li>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../Wine_Spirit_2014.pdf">
       <img src="http://www.truefabrications.com/catalog/wss2014.jpg" />
-      <p style="font-family: 'Montserrat', sans-serif;">Wine & Spirit</p>
+      <p>Wine & Spirit</p>
     </a></li>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../holiday2014.pdf">
       <img src="http://www.truefabrications.com/catalog/holidayleaflet.jpg" />
-      <p style="font-family: 'Montserrat', sans-serif;">Holiday Leaflet</p>
+      <p>Holiday Leaflet</p>
     </a></li>
     <li><a href="http://catalog.truefabrications.com/pdf/viewer/?file=../PackageDeal2014.pdf">
       <img src="http://www.truefabrications.com/catalog/PACKAGE_DEALS_webcover.jpg" />
-      <p style="font-family: 'Montserrat', sans-serif;">Package Deals</p>
+      <p>Package Deals</p>
     </a></li>
   </ul>
 

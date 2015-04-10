@@ -22,10 +22,10 @@
       <a href="/who"><li>Our Company</li></a>
       <a href="/about-brands"><li class="expandingNav">Our Brands</a>
         <ul class="tfHidden" style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host "><li>Host</li></a>
           <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
         </ul>
       </li>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
@@ -48,34 +48,42 @@
   <h4>Same-Day Shipping</h4>
   <p>We strive to make ordering from True Fabrications as fast and easy as possible.  Place your order before 3:00 PM Pacific Time and we'll ship it the same day.</p>
 
-  <h4>Free Backorder Shipping</h4>
-  <p>True Fabrications has an average in-stock rate of 98% on over 2,000 items.  If you happen to order an item that's out of stock we'll ship it directly to you the moment that it's back in our warehouse, free of charge.</p>
-
   <h4>Shipping Times</h4>
-  <p>Shipping times will vary depending on your location. The majority of the Pacific Northwest will receive their order the next day, most of the Southwest will receive their order in two business days, the Midwest in three to four business days, and the Eastern Seaboard in five business days. Naturally, inclement weather and other circumstances beyond our control can delay shipping. You can check out estimates specific to your zip code with <a href="http://www.ups.com/maps/results">this map</a> provided by UPS, which we use for most of our shipments (note that we ship from zip code 98057). We're also happy to provide tracking for any order - just give us a call!</p>
+  <p>Shipping times will vary depending on your location. The majority of the Pacific Northwest will receive their order the next day, most of the Southwest will receive their order in two business days, the Midwest in three to four business days, and the Eastern Seaboard in five business days. Naturally, inclement weather and other circumstances beyond our control can delay shipping. You can check out estimates specific to your zip code with <a href="http://www.ups.com/maps">this map</a> provided by UPS, which we use for most of our shipments (note that we ship from zip code 98057). We're also happy to provide tracking for any order - just give us a call!</p>
 </section>
 </div>
 <div class="bodyEnd">&nbsp;</div>
 <!-- End Body Section -->
 <script>
-var $ = jQuery;
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
 
-var tfMain = function() {
+  var tfMain = function() {
 
 
-  $('.sidebar').scrollToFixed({
-    limit: $('.bodyEnd').offset().top,
-    minWidth: 760
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
   });
-
-
-};
-
-$('.expandingNav').click(function(){
-  $(this).children('.tfHidden').slideDown();
-  });
-
-$(document).ready(tfMain);
+    
+  tfMain();
+}
 
 </script>
 </body>

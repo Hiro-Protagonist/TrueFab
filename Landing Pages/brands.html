@@ -1,22 +1,228 @@
-<head>
-
-<link rel="stylesheet" href="/assets/tf-styles/landingPages.css"></link>
+<link rel="stylesheet" href="/assets/tf-styles/landingPages.css">
 
 <script src="/assets/js/jquery-scrolltofixed-min.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
 <style type="text/css">
 
 .tfFourPanels{
   vertical-align: bottom;
+  background: #b0bc22;
+  border-radius: 100%;
 }
 
-
-
-.tfFourPanels img{
-  width: 125px;
+.brand-box{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
 }
+.brand-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.brand-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.brand-content-center {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.brand-content img {
+  width: 65%;
+}
+.brand-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white
+}
+
+.brand-box-true{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-true:hover{
+    background: #b0bc22;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-true:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-host{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-host:hover{
+    background: #aaaaaa;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-host:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-twine{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-twine:hover{
+    background: #340000;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-twine:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-viski{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-viski:hover{
+    background: #444444;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-viski:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-foster{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-foster:hover{
+    background: #f0532d;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-foster:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-truezoo{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-truezoo:hover{
+    background: #5ebfe5;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-truezoo:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.brand-box-revel{
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    display: inline-block;
+    background: #ababab;
+    border-radius: 100%;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-revel:hover{
+    background: #edcb00;
+    -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.brand-box-revel:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
 
 .tfFourPanels p{
   padding-left: 2.5%;
@@ -36,14 +242,18 @@
   letter-spacing: .03em;
 }
 
-
+.center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 </style>
 
 
-</head>
-<body>
+
+
 <div class="tfBodyText">
 
 
@@ -53,21 +263,21 @@
     <h5>About Us</h5>
     <ul>
       <a href="/who"><li>Our Company</li></a>
-      <a href="/about-brands"><li class="expandingNav">Our Brands</a>
-        <ul class="tfHidden" style="margin-left:15px;">
-          <a href="/about-brands-viski"><li>Viski</li></a>
-          <a href="/about-brands-viski"><li>True</li></a>
-          <a href="/about-brands-viski"><li>Host</li></a>
+      <a href="/about-brands"></a><li style="color: #b0bc22;" class="expandingNav"><a href="/about-brands">Our Brands</a>
+        <ul style="margin-left:15px;">
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host"><li>Host</li></a>
           <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
         </ul>
       </li>
       <a href="/guarantee"><li>Our Guarantees</li></a>   
     </ul>
-    <h5>Help & Info</h5>
+    <h5>Help &amp; Info</h5>
     <ul>
       <a href="/faq"><li>FAQ</li></a>
-      <a href="/shipping"><li>Shipping & Deliveries</li></a>
-      <a href="/returns"><li>Returns & Exchanges</li></a>
+      <a href="/shipping"><li>Shipping &amp; Deliveries</li></a>
+      <a href="/returns"><li>Returns &amp; Exchanges</li></a>
       <a href="/contact"><li>Contact</li></a>
     </ul>
   </nav>
@@ -76,34 +286,33 @@
 
 
 <section id="guarantee" style="width: 80%;">
-<h3>Our Family of Brands</h3>
-<br />
-<div class="tfPanelsContainer">
-  <div class="tfFourPanels">
-    <img src="/assets/images/content/CD_pages/true_brandlogo_host.png" />
-    <h4>Host</h4>
-  </div>
-  <div class="tfFourPanels">
-    <img src="/assets/images/content/CD_pages/true_brandlogo_true.png" />
-    <h4>True</h4>
-  </div>
-  <div class="tfFourPanels">
-    <img src="/assets/images/content/CD_pages/true_brandlogo_twine.png" />
-    <h4>Twine</h4>
-  </div>
-  <div class="tfFourPanels">
-    <img src="/assets/images/content/CD_pages/true_brandlogo_viski.png" />
-    <h4>Viski</h4>
-  </div>
-  <span class="stretch"></span>
+<h3>Our Multi Brand Story</h3>
+<br>
+<div style="width: 80%; margin-left: auto; margin-right: auto; text-align: justify;">
+  <p>True Fabrications was founded in 2003 with a single humble wine bag. In the intervening years, our product line has grown to span every sector of the beverage industry and reach further than we could have imagined, from kitchen to décor to housewares. To address consumers’ equally wide-ranging needs and tastes, we’ve crafted a family of brands that appeal to unique consumer segments through distinctive product selection and proprietary packaging design. Together they provide more flexibility than ever in building a product selection for your unique needs and audiences.</p>
+  <p>Backed as always by our 100% Satisfaction Guarantee, our complete brand family makes us the leading designer and supplier of beverage lifestyle accessories worldwide, and continues to represent everything you know and love about True Fabrications.</p>
 </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
+<br>
+<div class="center">
+<h3>Explore Our Brands</h3>
+<br>
+<div class="tfPanelsContainer">
+<div class='brand-box-true'>
+    <div class='brand-content'><a href="/about-brands-true" data-hashtag="#/brands/Brands_True"><div class="brand-content-center"><span><img src="/assets/images/content/CD_pages/true_brandicon_true.png"/></span></div></a></div>
+</div>
+<div class='brand-box-host'>
+    <div class='brand-content'><a href="/about-brands-host" data-hashtag="#/brands/Brands_HOST"><div class="brand-content-center" class="brand-content-center" class="brand-content-center"><span><img src="/assets/images/content/CD_pages/true_brandicon_host.png"/></span></div></a></div>
+</div>
+<div class='brand-box-twine'>
+    <div class='brand-content'><a href="/about-brands-twine" data-hashtag="#/brands/Brands_Twine"><div class="brand-content-center" class="brand-content-center"><span><img src="/assets/images/content/CD_pages/true_brandicon_twine.png"/></span></div></a></div>
+</div>
+<div class='brand-box-viski'>
+    <div class='brand-content'><a href="/about-brands-viski" data-hashtag="#/brands/Brands_Viski"><div class="brand-content-center"><span><img src="/assets/images/content/CD_pages/true_brandicon_viski.png"/></span></div></a></div>
+</div>
+<span class="stretch"></span>
+</div>
+</div>
+
 
 <div class="bodyEnd">&nbsp;</div>
 <!-- End Body Section -->
@@ -129,4 +338,3 @@ $('.expandingNav').click(function(){
 $(document).ready(tfMain);
 
 </script>
-</body>

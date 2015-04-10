@@ -1,16 +1,166 @@
 <head>
 <link rel="stylesheet" href="/assets/tf-styles/landingPages.css"></link>
 
-
+<script src="/assets/js/jquery-scrolltofixed-min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 <style type="text/css">
 
-.tfFourPanels img{
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#trueHeader {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+#trueHeader h4 {
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1em;
+  margin-top:.75em;
+  margin-bottom: .75em;
+  color: #b0bc22;
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+}
+
+#trueHeader h5 {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #999999;
+  font-family: 'Roboto slab', 'Helvetica', 'Arial', sans-serif;
+  font-style: italic;
+}
+
+#trueHeader p {
+font-size: 1.1em;
+line-height: 1.4em;
+margin-bottom: 4%;
+color: #444444;
+font-family: 'Helvetica', 'Arial', sans-serif;
+font-weight: 300;
+}
+
+#trueHeader img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#trueBody {
+  text-align: center;
+}
+
+#trueBody h6 {
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  color: #444444;
+  font-size: 1.25em;
+  letter-spacing: .2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0px;
+  margins: 0px;
+}
+
+#trueBody p {
+  text-align: center;
+  font-size: 1em;
+  color: #444444;
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  margin-bottom: 3%;
+}
+
+.trueCollection {
+  margin-bottom: 10%;
+}
+
+.trueCollection img {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0
+}
+
+.trueThree {
+  width: 33%;
+  display: inline-block;
+}
+
+.trueThree img{
+  position: relative;
   width: 100%;
 }
 
+.trueThreeSpanTwo {
+  width: 66.5%;
+  display: inline-block;
+}
 
+.trueThreeSpanTwo img{
+  position: relative;
+  width: 100%;
+}
+
+.trueOne {
+  width: 100%;
+}
+
+.trueOne img{
+  width: 100%;
+}
+
+.tfPanelsContainer{
+  font-size: 0px;
+  line-height: 0px;
+  display: block;
+  margin-top: .5%;
+}
+
+.trueButton1 {
+
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  color: #ffffff;
+  border-color: transparent;
+  font-size: 1.5em;
+  letter-spacing: .08em;
+  background-color: #c1cc23;
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  text-transform: uppercase;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+.trueButton1:hover {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: #d3e020;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+
+@media screen and (max-width: 760px) {
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+  }
 
 </style>
 
@@ -18,48 +168,82 @@
 </head>
 <body>
 <div class="tfBodyText">
-<section id="brandsTrue">
 
-<!-- About Header -->
-<div class="aboutHeader">
-  <h2 style="text-align: center;"><a href="/about">About True Fabrications</a></h2>
-  <nav>
+<!-- Sidebar -->
+<div class="sidebarContainer">
+  <nav class="sidebar" style="position:relative;">
+    <h5>About Us</h5>
     <ul>
-    <a href="/who" style="color:#BBBBBB;"><li class="whoLink">WHO WE ARE</li></a><a href="/guarantee" style="color:#BBBBBB;"><li class="guaranteeLink" style="margin-left: 10%; margin-right: 10%;">OUR GUARANTEES</li></a><a href="/about-brands"><li class="brandsLink">OUR BRANDS</li></a>
+      <a href="/who"><li>Our Company</li></a>
+      <a href="/about-brands"><li class="expandingNav">Our Brands</a>
+        <ul style="margin-left:15px;">
+          <a href="/about-brands-true"><li>True</li></a>
+          <a href="/about-brands-host "><li>Host</li></a>
+          <a href="/about-brands-twine"><li>Twine</li></a>
+          <a href="/about-brands-viski"><li>Viski</li></a>
+        </ul>
+      </li>
+      <a href="/guarantee"><li>Our Guarantees</li></a>   
+    </ul>
+    <h5>Help & Info</h5>
+    <ul>
+      <a href="/faq"><li>FAQ</li></a>
+      <a href="/shipping"><li>Shipping & Deliveries</li></a>
+      <a href="/returns"><li>Returns & Exchanges</li></a>
+      <a href="/contact"><li>Contact</li></a>
     </ul>
   </nav>
 </div>
-<!-- End Header -->
+<!-- End Sidebar -->
 
+<section id="true-page">
+  <div id="trueHeader">
+    <img style="width: 200px;" src="/assets/images/content/CD_pages/true_brandlogo_true.png" />
+    <div class="center" style="width: 100%;">
+    <h4>Tried & True<br>Essentials</h4>
+    <p>True® encompasses a comprehensive and essential array of beverage and lifestyle basics providing exceptional value, variety and function across the board. From the simplest bottle openers to brightly colored flasks, glassware and corkscrews to a complete line of wine bags, these are the products that make drinking fresh, accessible and fun.</p>
+    <img src="/assets/images/content/CD_pages/true_brands_host-team.jpg" />
+    <h4>Our Process Includes</h4>
+    <h5 style="margin-top: -.75em;">and not in this order</h5>
+    <img src="/assets/images/content/CD_pages/host_about_icons.png" />
+    <a href="http://host.tf.production.na1.netsuitestaging.com/"><button class="trueButton1">Shop Host</button></a>
+    </div>
+  </div>
 
-<div class="tfPanelsContainer">
-  <div class="tfFourPanels">
-      <a href="/about-brands-true"><img src="/assets/images/content/CD_pages/true_who_1.png" /></a>
-  </div>
-  <div class="tfFourPanels">
-      <a href="/about-brands-host"><img src="/assets/images/content/CD_pages/true_who_2.png" /></a>
-  </div>
-  <div class="tfFourPanels">
-      <a href="/about-brands-twine"><img src="/assets/images/content/CD_pages/true_who_3.png" /></a>
-  </div>
-  <div class="tfFourPanels">
-      <a href="/about-brands-viski"><img src="/assets/images/content/CD_pages/true_who_1.png" /></a>
-  </div>
-  <span class="stretch"></span>
-</div>
-<div class="brandBody">
-  <div class="brandLogo">
-    <img src="/assets/images/content/CD_pages/true_brands_viskilogo.png" />
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-  <img src="/assets/images/content/banners/True_banner_AboutUs.jpg" />
-</div>
 </section>
 </div>
+<div class="bodyEnd">&nbsp;</div>
+<!-- End Body Section -->
+<script>
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
+
+  var tfMain = function() {
+
+
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
+  });
+    
+  tfMain();
+}
+
+</script>
 </body>

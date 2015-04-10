@@ -1,31 +1,33 @@
 <html>
-	<head>
-		<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <title>True Fabrications | Catalog Request</title>
+    <head>
+        <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <style type="text/css">
-body{
-font-family: 'Montserrat', sans-serif;
-color: #323232;
-background-color: #e7e7e7;
-}
 
 .form_section{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica","Arial",sans-serif;
     width: 700px;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
-    padding: 30px;
+    margin-top: -10px;
+    color: #666666;
 }
 
 #header{
-font-size: 2em;
-color: #b0bc22;
-font-weight: bold;
-font-family: 'Montserrat', sans-serif;
-padding-bottom: 8px;
-padding-top: 10px;
+    padding-bottom: 30px;
 }
+
+    #header h1 {
+        font-size: 2em;
+        color: #b0bc22;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #header p{
+        font-size: .75em;
+        color: #666666;
+    }
 
 .containerRow{
     width: 100%;
@@ -54,76 +56,109 @@ padding-top: 10px;
     background-color: #b0bc22;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
 }
-		</style>
-	</head>
-	<body>
-	<div class="form_section">
-    	<NLFORM>
+
+.truefabButton1 {
+color: #fff !important;
+display: inline-block;
+position: relative;
+border: none;
+font-family: 'Nunito', "Helvetica Neue",Arial,Helvetica,sans-serif;
+font-size: 16px;
+line-height: 1.6875;
+font-weight: bold;
+text-align: center;
+letter-spacing: .02em;
+text-decoration: none;
+padding: 0.57143em 1.42857em;
+max-width: 100%;
+-webkit-font-smoothing: antialiased;
+-webkit-border-radius: 4px 4px 4px 4px;
+-moz-border-radius: 4px 4px 4px 4px;
+border-radius: 4px 4px 4px 4px;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-webkit-transition: all 0.2s ease;
+transition: all 0.2s ease;
+background: #B7B7B7;
+}
+.truefabButton1:hover {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+
+}
+
+
+        </style>
+    </head>
+    <body>
+    <div class="form_section">
+        <NLFORM>
         <div id="header">
-	   </div>
-       <div class="containerRow">
-            <div class="leftColumn">Title:</div>
-            <div class="leftColumn" style="font-size:2em; font-weight:bold;"><nltitle></nltitle></div>
-        </div>
+        <h1>Request a Wholesale Catalog</h1>
+        <p>If you are a retail business interested in carrying our products, please fill out the form below to have the catalog(s) of your choice mailed to you. These catalogs take 5-10 business days to arrive.  Until then, please feel free to browse our site!</p>
+       </div>
         <div class="containerRow">
             <div class="leftColumn">Company Name:</div>
-    		<div class="leftColumn" style="font-size:2em; font-weight:bold;"><nlcompanyname></nlcompanyname></div>
+            <div class="leftColumn" style="font-size:2em; font-weight:bold;"><nlcustrecord_tf_catalogrequest_company></nlcustrecord_tf_catalogrequest_company></div>
         </div>
         <div class="containerRow">
-            <div class="leftColumn">Tax ID:</div>
-            <div class="leftColumn" style="font-size:2em; font-weight:bold;"><nlcustentity_ns_ps_taxvat></nlcustentity_ns_ps_taxvat></div>
+            <div class="leftColumn">First Name:</div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_firstname></nlcustrecord_tf_catalogrequest_firstname></div>
         </div>
         <div class="containerRow">
-    		<div class="leftColumn">First Name:</div>
-            <div class="rightColumn"><nlfirstname></nlfirstname></div>
+            <div class="leftColumn">Last Name:</div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_lastname></nlcustrecord_tf_catalogrequest_lastname></div>
         </div>
-        <div class="containerRow">
-    		<div class="leftColumn">Last Name:</div>
-            <div class="rightColumn"><nllastname></nllastname></div>
-    	</div>
         <div class="containerRow">
             <div class="leftColumn">Address Line 1:</div>
-            <div class="rightColumn"><nladdress1></nladdress1></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_address1></nlcustrecord_tf_catalogrequest_address1></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">Address Line 2:</div>
-            <div class="rightColumn"><nladdress2></nladdress2></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_address2></nlcustrecord_tf_catalogrequest_address2></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">City:</div>
-            <div class="rightColumn"><nlcity></nlcity></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_city></nlcustrecord_tf_catalogrequest_city></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">State:</div>
-            <div class="rightColumn"><nlstate></nlstate></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_state></nlcustrecord_tf_catalogrequest_state></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">Zip:</div>
-            <div class="rightColumn"><nlzipcode></nlzipcode></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_postalcode></nlcustrecord_tf_catalogrequest_postalcode></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">Country:</div>
-            <div class="rightColumn"><nlcountry></nlcountry></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_country></nlcustrecord_tf_catalogrequest_country></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">Phone:</div>
-            <div class="rightColumn"><nlphone></nlphone></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_phonenumber></nlcustrecord_tf_catalogrequest_phonenumber></div>
         </div>
         <div class="containerRow">
             <div class="leftColumn">Email:</div>
-            <div class="rightColumn"><nlemail></nlemail></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_email></nlcustrecord_tf_catalogrequest_email></div>
         </div>
         <div class="containerRow">
-            <div class="leftColumn">Incoming Message:</div>
-            <div class="rightColumn"><nlincomingmessage></nlincomingmessage></div>
+            <div class="leftColumn">Requested Catalog(s):<br><I><span style="font-size:.5em;">Hold Ctrl to Select Multiple</span></I></div>
+            <div class="rightColumn"><nlcustrecord_tf_catalogrequest_message></nlcustrecord_tf_catalogrequest_message></div>
         </div>
-        <div class="containerRow">
-            <div class="leftColumn" style="font-size:2em; font-weight:bold;"><nlsubsidiary></nlsubsidiary></div>
-        </div>
-    		<br>
-    <input value="submit" class="submit" type="submit">
+            <br>
+    <input value="submit" class="submit truefabButton1" type="submit">
     </form>
 </div>
-	</body>
+    </body>
+<style>
+.input{
+    font-size: 10pt;
+    color: #666666;
+}
+</style>
 </html>
