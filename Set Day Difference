@@ -1,0 +1,35 @@
+function setDayDifference()
+{
+
+  var searchresults = nlapiSearchRecord( 'supportcase', 'customsearch1958' );
+  var info= searchresults.length;
+  for ( var i = 0; i < searchresults.length; i++){
+    var record = nlapiLoadRecord( searchresults[i].getRecordType(), searchresults[i].getId() );
+    info = record.getId();
+    var totalScore = record.getFieldValue('custevent_score3');
+    var nsStartDate = record.getFieldValue('startdate');
+    var startDate = new Date(nsStartDate);
+    var currentDate = new Date();
+    var timeDiff = currentDate.getTime() - startDate.getTime();
+    var differenceInDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    record.setFieldValue('custevent_days_open', differenceInDays);
+
+    var experience = nlapiGetFieldValue('custevent_cust_ex');
+    var impact = nlapiGetFieldValue('custevent_effic_imp');
+    var revenue = nlapiGetFieldValue('custevent_rev_gen');
+    var top = nlapiGetFieldValue('custevent_top_5');
+    var costBenefit = nlapiGetFieldValue('custevent_costbenefit');
+
+    var daysOpen = Math.floor(differenceInDays / 3);
+    var experienceNumber = Number(experience) * 3;
+    var impactNumber = Number(impact) * 2;
+    var revenueGenNumber = Number(revenue);
+    var topNumber = Number(top) * 3;
+    var costBenefitNumber = Number(costBenefit) * 2;
+    var totalScore = experienceNumber + impactNumber + revenueGenNumber + topNumber + costBenefitNumber + daysOpen;
+    record.setFieldValue('custevent_score3', totalScore);
+
+    nlapiSubmitRecord(record);
+  };
+
+}
