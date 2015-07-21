@@ -1,0 +1,30 @@
+
+if (SC.ENVIRONMENT.jsEnvironment === 'browser') {
+  var $ = jQuery;
+
+  var tfMain = function() {
+
+
+    $('.sidebar').scrollToFixed({
+      limit: $('.bodyEnd').offset().top,
+      minWidth: 760
+    });
+
+
+  };
+
+  $('.expandingNav').on('click', function(e){
+    if($(e.target).closest('ul').parent('nav.sidebar').length){
+      if($(this).hasClass('expanded')){
+        $(this).children('.tfHidden').slideUp();
+        $(this).removeClass('expanded');
+      }
+      else{
+        $(this).children('.tfHidden').slideDown();
+        $(this).addClass('expanded');
+      }
+    }
+  });
+    
+  tfMain();
+}
