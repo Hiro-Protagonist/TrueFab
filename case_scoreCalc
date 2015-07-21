@@ -1,0 +1,22 @@
+function afterFieldEdit(type, name) {
+ if (name == 'custevent_cust_ex' || name == 'custevent_effic_imp' || name == 'custevent_rev_gen' || name == 'custevent_top_5') {
+  var experience = nlapiGetFieldValue('custevent_cust_ex');
+  var impact = nlapiGetFieldValue('custevent_effic_imp');
+  var revenue = nlapiGetFieldValue('custevent_rev_gen');
+  var top = nlapiGetFieldValue('custevent_top_5');
+  var costBenefit = nlapiGetFieldValue('custevent_costbenefit');
+  var daysOpen = nlapiGetFieldValue('custevent_days_open');
+
+ var experienceNumber = Number(experience) * 3;
+ var impactNumber = Number(impact) * 2;
+ var revenueGenNumber = Number(revenue);
+ var topNumber = Number(top) * 3;
+ var costBenefitNumber = Number(costBenefit) * 2;
+ var daysOpenNumber = Math.floor( Number(daysOpen) / 3 );
+ var totalScore = experienceNumber + impactNumber + revenueGenNumber + topNumber + costBenefitNumber + daysOpenNumber;
+
+ nlapiSetFieldValue('custevent_score3', totalScore);
+ return true;
+ }
+}
+
